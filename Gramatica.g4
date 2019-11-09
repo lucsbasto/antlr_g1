@@ -1,6 +1,7 @@
 grammar Gramatica;
 gramatica : line+ EOF; 
-line : name? ','? relacionamento? name caracteristica?;
+//Jose, casado(a) com Maria em 01/01/1990, filho de Joao, filho de Marta, amigo(a) de Pedro ha 5 ano(s)
+line : name+ ',' relacionamento+ name caracteristica ',' relacionamento name ',' relacionamento name ',' relacionamento name caracteristica;
 name : PESSOA;
 caracteristica : ('em ' date | 'ha' NUMBER tempo);
 date: DATE;
